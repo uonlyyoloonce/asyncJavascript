@@ -1,5 +1,5 @@
-// var Observable = Rx.Observable;
 
+var Observable = Rx.Observable;
 var parent = document.getElementById("parent");
 var widget = document.getElementById("widget");
 
@@ -24,7 +24,7 @@ var drags =
     concatAll();
 
 var subscription = 
-  drags.forEach(
+  drags.subscribe(
     function onNext(e) {
       widget.style.left = e.clientX + "px";
       widget.style.top = e.clientY + "px";
